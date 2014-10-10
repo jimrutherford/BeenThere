@@ -1,0 +1,41 @@
+
+Apache CouchDB has started, time to relax.
+Apache CouchDB 1.6.1 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.31.0>] Apache CouchDB has started on http://127.0.0.1:6003/
+[info] [<0.103.0>] 127.0.0.1 - - GET / 200
+[info] [<0.104.0>] 127.0.0.1 - - HEAD /_users/_all_docs 200
+[info] [<0.105.0>] 127.0.0.1 - - PUT /_config/admins/_hoodie 200
+[info] [<0.118.0>] 127.0.0.1 - - PUT /_config/admins/admin 200
+[info] [<0.117.0>] 127.0.0.1 - - PUT /app 201
+[info] [<0.116.0>] 127.0.0.1 - - PUT /app/_security 200
+[info] [<0.115.0>] 127.0.0.1 - - PUT /app/config 201
+[info] [<0.114.0>] 127.0.0.1 - - PUT /plugins 201
+[info] [<0.113.0>] 127.0.0.1 - - PUT /plugins/_security 200
+[info] [<0.112.0>] 127.0.0.1 - - PUT /_config/httpd/authentication_handlers 200
+[info] [<0.109.0>] 127.0.0.1 - - GET / 200
+[info] [<0.107.0>] 127.0.0.1 - - GET /_users 200
+[info] [<0.110.0>] 127.0.0.1 - - GET /plugins/_all_docs?include_docs=true 200
+[info] [<0.111.0>] 127.0.0.1 - - GET /app/config 200
+[info] [<0.108.0>] 127.0.0.1 - - GET /_db_updates?feed=longpoll&timeout=0 200
+[info] [<0.106.0>] 127.0.0.1 - - GET /_users/_changes?since=1&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.150.0>] 127.0.0.1 - - GET /app/ 200
+[info] [<0.152.0>] 127.0.0.1 - - GET /plugins/ 200
+[info] [<0.153.0>] 127.0.0.1 - - GET /_db_updates?feed=continuous&heartbeat=true 200
+[info] [<0.178.0>] 127.0.0.1 - - GET /app//_changes?since=2&feed=continuous&heartbeat=30000 200
+[info] [<0.181.0>] 127.0.0.1 - - GET /plugins//_changes?since=1&feed=continuous&heartbeat=30000&include_docs=true 200
+[info] [<0.206.0>] 127.0.0.1 - - DELETE /_session 200
+[info] [<0.207.0>] 127.0.0.1 - - GET /?hoodieId=o7e069f 200
+[info] [<0.210.0>] 127.0.0.1 - - GET /?hoodieId=o7e069f 200
+[info] [<0.191.0>] 127.0.0.1 - - GET /?hoodieId=o7e069f 200
+[info] [<0.288.0>] 127.0.0.1 - - DELETE /_session 200
+[info] [<0.193.0>] 127.0.0.1 - - GET /?hoodieId=5m22ksj 200
+[info] [<0.192.0>] 127.0.0.1 - - GET /plugins/_changes?include_docs=true&since=0 401
+[info] [<0.203.0>] 127.0.0.1 - - GET /_session 200
+[info] [<0.204.0>] 127.0.0.1 - - GET /_session 200
+[info] [<0.224.0>] 127.0.0.1 - - POST /_session 200
+[info] [<0.225.0>] 127.0.0.1 - - GET /app/config 200
+[info] [<0.327.0>] 127.0.0.1 - - GET /app/config?_=1412958322482 401
+[info] [<0.329.0>] 127.0.0.1 - - GET /_users/_all_docs?include_docs=true&startkey=%22org.couchdb.user%3A%22&endkey=%22org.couchdb.user%3B%22 200
+[info] [<0.214.0>] 127.0.0.1 - - GET /_users/_all_docs?include_docs=true&startkey=%22org.couchdb.user%3A%22&endkey=%22org.couchdb.user%3B%22 304
+[info] [<0.256.0>] 127.0.0.1 - - GET /app/config?_=1412958322483 401
