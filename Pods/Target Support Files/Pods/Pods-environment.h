@@ -72,3 +72,9 @@
 #define COCOAPODS_VERSION_MINOR_HOOHoodie 2
 #define COCOAPODS_VERSION_PATCH_HOOHoodie 2
 
+// INTULocationManager
+#define COCOAPODS_POD_AVAILABLE_INTULocationManager
+#define COCOAPODS_VERSION_MAJOR_INTULocationManager 1
+#define COCOAPODS_VERSION_MINOR_INTULocationManager 2
+#define COCOAPODS_VERSION_PATCH_INTULocationManager 0
+

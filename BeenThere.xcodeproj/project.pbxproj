@@ -13,6 +13,9 @@
 		3750530F19E83A7E00607BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3750530D19E83A7E00607BAF /* Main.storyboard */; };
 		3750531119E83A7E00607BAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3750531019E83A7E00607BAF /* Images.xcassets */; };
 		37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */; };
+		37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */; };
+		37D82F4C19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4B19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m */; };
+		37D82F4F19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4E19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m */; };
 		E0D320E0D56ADEC36F7E4FF3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97773A3A90A2E8721A16B077 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,12 @@
 		3750530E19E83A7E00607BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3750531019E83A7E00607BAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Nanaimo.gpx; path = Resources/Nanaimo.gpx; sourceTree = "<group>"; };
+		37D82F4619E8CBF200DF6775 /* FourSquareAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareAPIClient.h; path = "Network Client/FourSquareAPIClient.h"; sourceTree = "<group>"; };
+		37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareAPIClient.m; path = "Network Client/FourSquareAPIClient.m"; sourceTree = "<group>"; };
+		37D82F4A19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareJSONResponseSerializer.h; path = "Network Client/Serializers/FourSquareJSONResponseSerializer.h"; sourceTree = "<group>"; };
+		37D82F4B19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareJSONResponseSerializer.m; path = "Network Client/Serializers/FourSquareJSONResponseSerializer.m"; sourceTree = "<group>"; };
+		37D82F4D19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareJSONRequestSerializer.h; path = "Network Client/Serializers/FourSquareJSONRequestSerializer.h"; sourceTree = "<group>"; };
+		37D82F4E19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareJSONRequestSerializer.m; path = "Network Client/Serializers/FourSquareJSONRequestSerializer.m"; sourceTree = "<group>"; };
 		97773A3A90A2E8721A16B077 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C017DE384665C45848A93927 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,8 +77,8 @@
 				37D82F4019E8AF4600DF6775 /* Application */,
 				37D82F4319E8AF7800DF6775 /* Controllers */,
 				3750531019E83A7E00607BAF /* Images.xcassets */,
-				3750530D19E83A7E00607BAF /* Main.storyboard */,
 				37D82F4219E8AF7300DF6775 /* Model */,
+				37D82F4519E8CBC700DF6775 /* Network Client */,
 				37D82F3B19E8AEFB00DF6775 /* Resources */,
 				37D82F4119E8AF6B00DF6775 /* Storyboards */,
 				3750530319E83A7E00607BAF /* Supporting Files */,
@@ -107,6 +116,7 @@
 		37D82F4119E8AF6B00DF6775 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				3750530D19E83A7E00607BAF /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -132,6 +142,27 @@
 			children = (
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		37D82F4519E8CBC700DF6775 /* Network Client */ = {
+			isa = PBXGroup;
+			children = (
+				37D82F4919E8CD3500DF6775 /* Serializers */,
+				37D82F4619E8CBF200DF6775 /* FourSquareAPIClient.h */,
+				37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */,
+			);
+			name = "Network Client";
+			sourceTree = "<group>";
+		};
+		37D82F4919E8CD3500DF6775 /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				37D82F4A19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.h */,
+				37D82F4B19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m */,
+				37D82F4D19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.h */,
+				37D82F4E19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m */,
+			);
+			name = Serializers;
 			sourceTree = "<group>";
 		};
 		6331721BCBC8FF224067D70B /* Pods */ = {
@@ -257,9 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D82F4F19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m in Sources */,
 				3750530C19E83A7E00607BAF /* ViewController.m in Sources */,
 				3750530919E83A7E00607BAF /* AppDelegate.m in Sources */,
+				37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */,
 				3750530619E83A7E00607BAF /* main.m in Sources */,
+				37D82F4C19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

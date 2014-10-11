@@ -1,6 +1,6 @@
 #include "Pods-HOOHoodie.xcconfig"
 FRAMEWORK_SEARCH_PATHS = ${PODS_HOOHOODIE_FRAMEWORK_SEARCH_PATHS}
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/HOOHoodie" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/HOOHoodie"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/HOOHoodie" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/HOOHoodie" "${PODS_ROOT}/Headers/Public/INTULocationManager"
 OTHER_LDFLAGS = ${PODS_HOOHOODIE_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}
