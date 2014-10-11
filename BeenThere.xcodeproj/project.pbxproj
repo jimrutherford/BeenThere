@@ -12,7 +12,7 @@
 		3750530C19E83A7E00607BAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750530B19E83A7E00607BAF /* ViewController.m */; };
 		3750530F19E83A7E00607BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3750530D19E83A7E00607BAF /* Main.storyboard */; };
 		3750531119E83A7E00607BAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3750531019E83A7E00607BAF /* Images.xcassets */; };
-		3750531419E83A7E00607BAF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3750531219E83A7E00607BAF /* LaunchScreen.xib */; };
+		37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */; };
 		E0D320E0D56ADEC36F7E4FF3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97773A3A90A2E8721A16B077 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		3750530B19E83A7E00607BAF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3750530E19E83A7E00607BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3750531019E83A7E00607BAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3750531319E83A7E00607BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Nanaimo.gpx; path = Resources/Nanaimo.gpx; sourceTree = "<group>"; };
 		97773A3A90A2E8721A16B077 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C017DE384665C45848A93927 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,14 +65,15 @@
 		3750530219E83A7E00607BAF /* BeenThere */ = {
 			isa = PBXGroup;
 			children = (
-				3750530719E83A7E00607BAF /* AppDelegate.h */,
-				3750530819E83A7E00607BAF /* AppDelegate.m */,
-				3750530A19E83A7E00607BAF /* ViewController.h */,
-				3750530B19E83A7E00607BAF /* ViewController.m */,
-				3750530D19E83A7E00607BAF /* Main.storyboard */,
+				37D82F4019E8AF4600DF6775 /* Application */,
+				37D82F4319E8AF7800DF6775 /* Controllers */,
 				3750531019E83A7E00607BAF /* Images.xcassets */,
-				3750531219E83A7E00607BAF /* LaunchScreen.xib */,
+				3750530D19E83A7E00607BAF /* Main.storyboard */,
+				37D82F4219E8AF7300DF6775 /* Model */,
+				37D82F3B19E8AEFB00DF6775 /* Resources */,
+				37D82F4119E8AF6B00DF6775 /* Storyboards */,
 				3750530319E83A7E00607BAF /* Supporting Files */,
+				37D82F4419E8AF8000DF6775 /* Views */,
 			);
 			path = BeenThere;
 			sourceTree = "<group>";
@@ -84,6 +85,53 @@
 				3750530519E83A7E00607BAF /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37D82F3B19E8AEFB00DF6775 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		37D82F4019E8AF4600DF6775 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3750530719E83A7E00607BAF /* AppDelegate.h */,
+				3750530819E83A7E00607BAF /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		37D82F4119E8AF6B00DF6775 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		37D82F4219E8AF7300DF6775 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		37D82F4319E8AF7800DF6775 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3750530A19E83A7E00607BAF /* ViewController.h */,
+				3750530B19E83A7E00607BAF /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		37D82F4419E8AF8000DF6775 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		6331721BCBC8FF224067D70B /* Pods */ = {
@@ -164,8 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3750530F19E83A7E00607BAF /* Main.storyboard in Resources */,
-				3750531419E83A7E00607BAF /* LaunchScreen.xib in Resources */,
 				3750531119E83A7E00607BAF /* Images.xcassets in Resources */,
+				37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,14 +272,6 @@
 				3750530E19E83A7E00607BAF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3750531219E83A7E00607BAF /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3750531319E83A7E00607BAF /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
