@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "AFHTTPSessionManager.h"
 
+#import <CoreLocation/CoreLocation.h>
+
 @interface FourSquareAPIClient : AFHTTPSessionManager
 
 + (FourSquareAPIClient *)sharedClient;
+
+- (void) searchWithCurrentLcoation:(CLLocationCoordinate2D)coordinate;
 
 @end

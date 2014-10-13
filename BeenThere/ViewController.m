@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "FourSquareAPIClient.h"
+
 
 @interface ViewController ()
 
@@ -17,6 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self searchForLocation];
+}
+
+- (void) searchForLocation
+{
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(49.163522, -123.937283);
+    
+    [[FourSquareAPIClient sharedClient] searchWithCurrentLcoation:coord];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -20,7 +20,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        NSString *serverURL = @"https://api.foursquare.com/v2/venues/search";
+        NSString *serverURL = @"https://api.foursquare.com/v2/";
 
         NSURL *baseURL = [NSURL URLWithString:serverURL];
         
@@ -41,5 +41,32 @@
     
     return _sharedClient;
 }
+
+- (void) searchWithCurrentLcoation:(CLLocationCoordinate2D)coordinate
+{
+    NSString * path = @"venues/search";
+    
+    NSString *latLong = [NSString stringWithFormat:@"%f,%f", coordinate.latitude, coordinate.longitude];
+    
+    NSDictionary *params = @{@"client_id": kFourSquareClientID,
+                             @"client_secret": kFourSquareClientSecret,
+                             @"v": @"20130815",
+                             @"ll": latLong,
+                             @"intent": @"browse",
+                             @"query": @"sushi"};
+    
+    [self GET:path parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSLog(@"%@", responseObject);
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        
+    }];
+}
+
+
+
 
 @end
