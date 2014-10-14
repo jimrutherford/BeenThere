@@ -14,6 +14,10 @@
 		3750532E19EC35BA00607BAF /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750532C19EC35BA00607BAF /* UIView+Layout.m */; };
 		3750533119EC35D500607BAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533019EC35D500607BAF /* ViewController.m */; };
 		3750533519EC597200607BAF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533419EC597200607BAF /* LoginViewController.m */; };
+		3750533A19ED7F6900607BAF /* UIButton+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533919ED7F6900607BAF /* UIButton+Styles.m */; };
+		3750533D19ED874500607BAF /* HoodieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533C19ED874500607BAF /* HoodieManager.m */; };
+		3750534119ED898500607BAF /* FadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534019ED898500607BAF /* FadeSegue.m */; };
+		3750534419ED8A6200607BAF /* MaskTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534319ED8A6200607BAF /* MaskTransition.m */; };
 		37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 37892E4C19ECF169008BE88D /* UIColor+Styles.m */; };
 		37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */; };
 		37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */; };
@@ -40,6 +44,14 @@
 		3750533419EC597200607BAF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/LoginViewController.m; sourceTree = "<group>"; };
 		3750533619EC620900607BAF /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		3750533719EC714500607BAF /* BeenThere.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeenThere.pch; sourceTree = "<group>"; };
+		3750533819ED7F6900607BAF /* UIButton+Styles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Styles.h"; path = "Styles/UIButton+Styles.h"; sourceTree = "<group>"; };
+		3750533919ED7F6900607BAF /* UIButton+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Styles.m"; path = "Styles/UIButton+Styles.m"; sourceTree = "<group>"; };
+		3750533B19ED874500607BAF /* HoodieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HoodieManager.h; path = Model/HoodieManager.h; sourceTree = "<group>"; };
+		3750533C19ED874500607BAF /* HoodieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HoodieManager.m; path = Model/HoodieManager.m; sourceTree = "<group>"; };
+		3750533F19ED898500607BAF /* FadeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FadeSegue.h; path = Segues/FadeSegue.h; sourceTree = "<group>"; };
+		3750534019ED898500607BAF /* FadeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FadeSegue.m; path = Segues/FadeSegue.m; sourceTree = "<group>"; };
+		3750534219ED8A6200607BAF /* MaskTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaskTransition.h; path = Segues/MaskTransition.h; sourceTree = "<group>"; };
+		3750534319ED8A6200607BAF /* MaskTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaskTransition.m; path = Segues/MaskTransition.m; sourceTree = "<group>"; };
 		37892E4B19ECF169008BE88D /* UIColor+Styles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Styles.h"; path = "Styles/UIColor+Styles.h"; sourceTree = "<group>"; };
 		37892E4C19ECF169008BE88D /* UIColor+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Styles.m"; path = "Styles/UIColor+Styles.m"; sourceTree = "<group>"; };
 		37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Nanaimo.gpx; path = Resources/Nanaimo.gpx; sourceTree = "<group>"; };
@@ -93,6 +105,7 @@
 				37D82F4219E8AF7300DF6775 /* Model */,
 				37D82F4519E8CBC700DF6775 /* Network Client */,
 				37D82F3B19E8AEFB00DF6775 /* Resources */,
+				3750533E19ED895A00607BAF /* Segues */,
 				37D82F4119E8AF6B00DF6775 /* Storyboards */,
 				37892E4A19ECF126008BE88D /* Styles */,
 				3750530319E83A7E00607BAF /* Supporting Files */,
@@ -138,11 +151,24 @@
 			name = Validators;
 			sourceTree = "<group>";
 		};
+		3750533E19ED895A00607BAF /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				3750533F19ED898500607BAF /* FadeSegue.h */,
+				3750534019ED898500607BAF /* FadeSegue.m */,
+				3750534219ED8A6200607BAF /* MaskTransition.h */,
+				3750534319ED8A6200607BAF /* MaskTransition.m */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
 		37892E4A19ECF126008BE88D /* Styles */ = {
 			isa = PBXGroup;
 			children = (
 				37892E4B19ECF169008BE88D /* UIColor+Styles.h */,
 				37892E4C19ECF169008BE88D /* UIColor+Styles.m */,
+				3750533819ED7F6900607BAF /* UIButton+Styles.h */,
+				3750533919ED7F6900607BAF /* UIButton+Styles.m */,
 			);
 			name = Styles;
 			sourceTree = "<group>";
@@ -176,6 +202,8 @@
 		37D82F4219E8AF7300DF6775 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3750533B19ED874500607BAF /* HoodieManager.h */,
+				3750533C19ED874500607BAF /* HoodieManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -343,13 +371,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3750533519EC597200607BAF /* LoginViewController.m in Sources */,
+				3750533D19ED874500607BAF /* HoodieManager.m in Sources */,
+				3750533A19ED7F6900607BAF /* UIButton+Styles.m in Sources */,
 				37D82F4F19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m in Sources */,
 				3750533119EC35D500607BAF /* ViewController.m in Sources */,
 				3750530919E83A7E00607BAF /* AppDelegate.m in Sources */,
 				37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */,
+				3750534119ED898500607BAF /* FadeSegue.m in Sources */,
 				37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */,
 				3750532E19EC35BA00607BAF /* UIView+Layout.m in Sources */,
 				3750530619E83A7E00607BAF /* main.m in Sources */,
+				3750534419ED8A6200607BAF /* MaskTransition.m in Sources */,
 				37D82F4C19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

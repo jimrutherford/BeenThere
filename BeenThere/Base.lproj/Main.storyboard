@@ -61,15 +61,58 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchLogo" id="T4E-Ye-0NU">
-                                <rect key="frame" x="10" y="123" width="301" height="280"/>
+                                <rect key="frame" x="10" y="20" width="301" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" id="c57-L7-XsZ" userLabel="Button Container">
+                                <rect key="frame" x="16" y="308" width="288" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vxG-o8-WSc">
+                                        <rect key="frame" x="0.0" y="28" width="130" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="nuN-KD-sYf" eventType="touchUpInside" id="cXQ-eE-ZMj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IFW-H8-H1a">
+                                        <rect key="frame" x="158" y="28" width="130" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Create Account">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createButtonPressed:" destination="nuN-KD-sYf" eventType="touchUpInside" id="pJZ-gj-G7I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="c7x-G5-Yaj" userLabel="Login">
+                                <rect key="frame" x="16" y="375" width="288" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view alpha="0.64999999999999969" contentMode="scaleToFill" id="FYJ-lZ-U7i" userLabel="backgroundScreen">
+                                        <rect key="frame" x="-8" y="-8" width="303" height="199"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="8Xf-Kv-hhz" id="G8i-hN-RDm"/>
+                        <outlet property="buttonContainer" destination="c57-L7-XsZ" id="OI0-qU-yFp"/>
+                        <outlet property="createAccountButton" destination="IFW-H8-H1a" id="CwW-FE-WdT"/>
+                        <outlet property="loginView" destination="c7x-G5-Yaj" id="Xa9-V1-ffe"/>
                         <outlet property="logoImage" destination="T4E-Ye-0NU" id="p4M-Vt-TPu"/>
+                        <outlet property="signInButton" destination="vxG-o8-WSc" id="egs-nq-9YK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhP-an-ahd" userLabel="First Responder" sceneMemberID="firstResponder"/>
