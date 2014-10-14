@@ -98,11 +98,26 @@
                                         <rect key="frame" x="-8" y="-8" width="303" height="199"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" id="jIE-zm-g0J" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="29" y="24" width="244" height="49"/>
+                                            <view contentMode="scaleToFill" id="jIE-zm-g0J" userLabel="Username Text Field" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="29" y="24" width="244" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <view contentMode="scaleToFill" id="64C-u9-iOr" userLabel="Password Text Field" customClass="JVFloatLabeledTextField">
+                                                <rect key="frame" x="29" y="72" width="244" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dE6-Jc-PKL" userLabel="Login Button">
+                                                <rect key="frame" x="143" y="125" width="130" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Create Account">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginActionButtonPressed:" destination="nuN-KD-sYf" eventType="touchUpInside" id="nDk-6z-2Ne"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -116,10 +131,13 @@
                         <outlet property="backgroundImage" destination="8Xf-Kv-hhz" id="G8i-hN-RDm"/>
                         <outlet property="buttonContainer" destination="c57-L7-XsZ" id="OI0-qU-yFp"/>
                         <outlet property="createAccountButton" destination="IFW-H8-H1a" id="CwW-FE-WdT"/>
+                        <outlet property="loginActionButton" destination="dE6-Jc-PKL" id="hPN-fH-cPp"/>
                         <outlet property="loginView" destination="c7x-G5-Yaj" id="Xa9-V1-ffe"/>
                         <outlet property="logoImage" destination="T4E-Ye-0NU" id="p4M-Vt-TPu"/>
+                        <outlet property="passwordTextField" destination="64C-u9-iOr" id="76V-09-Vvq"/>
                         <outlet property="signInButton" destination="vxG-o8-WSc" id="egs-nq-9YK"/>
                         <outlet property="usernameTextField" destination="jIE-zm-g0J" id="6jI-gl-PH3"/>
+                        <segue destination="bCs-uL-Dau" kind="custom" identifier="authSegue" customClass="FadeSegue" id="7C4-Eo-2ES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhP-an-ahd" userLabel="First Responder" sceneMemberID="firstResponder"/>

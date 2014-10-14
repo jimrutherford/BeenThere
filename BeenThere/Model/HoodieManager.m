@@ -10,64 +10,25 @@
 
 @implementation HoodieManager
 
-static HoodieManager *SINGLETON = nil;
+#pragma mark - Singleton
+static HoodieManager *singleton;
 
-static bool isFirstAccess = YES;
-
-#pragma mark - Public Method
-
-+ (id)sharedInstance
-{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        isFirstAccess = NO;
-        SINGLETON = [[super allocWithZone:NULL] init];    
++ (instancetype)instance {
+    static dispatch_once_t singletonToken;
+    dispatch_once(&singletonToken, ^{
+        singleton = [[self alloc] init];
     });
     
-    return SINGLETON;
+    return singleton;
 }
 
-#pragma mark - Life Cycle
-
-+ (id) allocWithZone:(NSZone *)zone
-{
-    return [self sharedInstance];
-}
-
-+ (id)copyWithZone:(struct _NSZone *)zone
-{
-    return [self sharedInstance];
-}
-
-+ (id)mutableCopyWithZone:(struct _NSZone *)zone
-{
-    return [self sharedInstance];
-}
-
-- (id)copy
-{
-    return [[HoodieManager alloc] init];
-}
-
-- (id)mutableCopy
-{
-    return [[HoodieManager alloc] init];
-}
-
-- (id) init
-{
-    if(SINGLETON){
-        return SINGLETON;
-    }
-    
-    if (isFirstAccess) {
-        [self doesNotRecognizeSelector:_cmd];
-        self.hoodie = [[HOOHoodie alloc] initWithBaseURLString:kHoodieBaseURL];
-    }
-    
+- (id)init {
     self = [super init];
+    if (!self) return nil;
+    
+    self.hoodie = [[HOOHoodie alloc] initWithBaseURLString:kHoodieBaseURL];
+    
     return self;
 }
-
 
 @end

@@ -8,7 +8,11 @@
 
 #import "LoginViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UITextFieldDelegate>
+{
+    BOOL isCreatingAccount;
+}
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 @property (weak, nonatomic) IBOutlet UIView *buttonContainer;
@@ -17,6 +21,10 @@
 @property (weak, nonatomic) IBOutlet UIView *loginView;
 
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *passwordTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *loginActionButton;
+
 
 @end
 
@@ -34,6 +42,8 @@
     
     [_signInButton applyBeenThereStyle];
     [_createAccountButton applyBeenThereStyle];
+    [_loginActionButton applyBeenThereStyle];
+    
     
     _loginView.alpha = 0.0;
     _loginView.y = 200;
@@ -42,16 +52,19 @@
     [_usernameTextField darkStyledAttributedPlaceholder:@"Email Address"];
     [_usernameTextField applyBeenThereDarkStyle];
     
+    [_passwordTextField darkStyledAttributedPlaceholder:@"Password"];
+    [_passwordTextField applyBeenThereDarkStyle];
+    
 }
 
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self performSelector:@selector(revealLogin) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(revealLoginButtons) withObject:nil afterDelay:1.0];
 }
 
-- (void) revealLogin
+- (void) revealLoginButtons
 {
     [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseIn animations:^{
        
@@ -70,9 +83,8 @@
     } completion:nil];
 }
 
-- (IBAction)loginButtonPressed:(id)sender {
-    
-    
+- (void) showLoginView
+{
     [UIView animateWithDuration:0.7 delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseIn animations:^{
         
         _buttonContainer.alpha = 0.0;
@@ -87,22 +99,71 @@
         _loginView.transform = CGAffineTransformIdentity;
         
     } completion:nil];
+}
+
+- (IBAction)loginButtonPressed:(id)sender {
+    
+    [_loginActionButton setTitle:@"Sign In" forState:UIControlStateNormal];
+    isCreatingAccount = NO;
+    [self showLoginView];
     
 }
 
 - (IBAction)createButtonPressed:(id)sender {
+    [_loginActionButton setTitle:@"Create Account" forState:UIControlStateNormal];
+    isCreatingAccount = YES;
+    [self showLoginView];
+}
+
+- (IBAction)loginActionButtonPressed:(id)sender {
+    
+    if (isCreatingAccount)
+    {
+        [self createAccount];
+    } else {
+        [self signIn];
+    }
+    
+}
+
+- (void) createAccount
+{
+    [hoodieManager.hoodie.account signUpUserWithName:_usernameTextField.text
+                                            password:_passwordTextField.text
+                                            onSignUp:^(BOOL signUpSuccessful, NSError *error) {
+                                                if (!error)
+                                                {
+                                                    [self performSegueWithIdentifier:@"authSegue" sender:self];
+                                                    
+                                                } else {
+                                                    NSLog(@"Error %@", error);
+                                                }
+                                                
+                                            }];
 }
 
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) signIn
+{
+    [hoodieManager.hoodie.account signInUserWithName:_usernameTextField.text
+                                            password:_passwordTextField.text
+                                            onSignIn:^(BOOL signInSuccessful, NSError *error) {
+                                                
+                                                if (!error)
+                                                {
+                                                    [self performSegueWithIdentifier:@"authSegue" sender:self];
+                                                    
+                                                } else {
+                                                    NSLog(@"Error %@", error);
+                                                }
+                                            }];
 }
 
-/*
+
+
 #pragma mark - Navigation
-
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].

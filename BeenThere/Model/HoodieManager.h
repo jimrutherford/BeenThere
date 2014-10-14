@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Taptonics. All rights reserved.
 //
 
-#define hoodieManager   [HoodieManager sharedInstance]
+#define hoodieManager   [HoodieManager instance]
 
 @interface HoodieManager : NSObject
 
@@ -16,6 +16,6 @@
  * gets singleton object.
  * @return singleton
  */
-+ (HoodieManager*)sharedInstance;
++ (instancetype)instance;
 
 @end
