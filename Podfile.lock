@@ -29,15 +29,19 @@ PODS:
     - AFNetworking (~> 2.0)
     - FMDB (~> 2.3)
   - INTULocationManager (1.2.0)
+  - JVFloatLabeledTextField (0.0.9)
 
 DEPENDENCIES:
+  - AFNetworking
   - HOOHoodie
   - INTULocationManager
+  - JVFloatLabeledTextField
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
   HOOHoodie: 3192d39599f9d9a1c44b06298b08bd0594999a28
   INTULocationManager: 596c57e35a00ca1ee9d59bf4cc2b63dc299b580e
+  JVFloatLabeledTextField: b6c7d824d231b3c01d14692feada878808480af8
 
 COCOAPODS: 0.34.2

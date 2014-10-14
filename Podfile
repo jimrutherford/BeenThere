@@ -3,5 +3,9 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 
+pod 'AFNetworking'
+
 pod "HOOHoodie"
 pod "INTULocationManager"
+
+pod 'JVFloatLabeledTextField'
