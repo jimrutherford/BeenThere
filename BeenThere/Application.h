@@ -9,6 +9,11 @@
 #ifndef BeenThere_Application_h
 #define BeenThere_Application_h
 
+// styles
+#import "UIColor+Styles.h"
+
+
+
 #import "UIViewLayout.h"
 
 
