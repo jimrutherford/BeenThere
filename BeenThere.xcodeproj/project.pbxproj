@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		3750530619E83A7E00607BAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750530519E83A7E00607BAF /* main.m */; };
 		3750530919E83A7E00607BAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750530819E83A7E00607BAF /* AppDelegate.m */; };
-		3750530C19E83A7E00607BAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750530B19E83A7E00607BAF /* ViewController.m */; };
 		3750530F19E83A7E00607BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3750530D19E83A7E00607BAF /* Main.storyboard */; };
 		3750531119E83A7E00607BAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3750531019E83A7E00607BAF /* Images.xcassets */; };
+		3750532E19EC35BA00607BAF /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750532C19EC35BA00607BAF /* UIView+Layout.m */; };
+		3750533119EC35D500607BAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533019EC35D500607BAF /* ViewController.m */; };
+		3750533519EC597200607BAF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533419EC597200607BAF /* LoginViewController.m */; };
 		37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */; };
 		37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */; };
 		37D82F4C19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4B19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m */; };
@@ -26,10 +28,17 @@
 		3750530519E83A7E00607BAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3750530719E83A7E00607BAF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3750530819E83A7E00607BAF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3750530A19E83A7E00607BAF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3750530B19E83A7E00607BAF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3750530E19E83A7E00607BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3750531019E83A7E00607BAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3750532B19EC35BA00607BAF /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		3750532C19EC35BA00607BAF /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		3750532D19EC35BA00607BAF /* UIViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewLayout.h; sourceTree = "<group>"; };
+		3750532F19EC35D500607BAF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controllers/ViewController.h; sourceTree = "<group>"; };
+		3750533019EC35D500607BAF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controllers/ViewController.m; sourceTree = "<group>"; };
+		3750533319EC597200607BAF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/LoginViewController.h; sourceTree = "<group>"; };
+		3750533419EC597200607BAF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/LoginViewController.m; sourceTree = "<group>"; };
+		3750533619EC620900607BAF /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		3750533719EC714500607BAF /* BeenThere.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeenThere.pch; sourceTree = "<group>"; };
 		37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Nanaimo.gpx; path = Resources/Nanaimo.gpx; sourceTree = "<group>"; };
 		37D82F4619E8CBF200DF6775 /* FourSquareAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareAPIClient.h; path = "Network Client/FourSquareAPIClient.h"; sourceTree = "<group>"; };
 		37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareAPIClient.m; path = "Network Client/FourSquareAPIClient.m"; sourceTree = "<group>"; };
@@ -77,11 +86,13 @@
 				37D82F4019E8AF4600DF6775 /* Application */,
 				37D82F4319E8AF7800DF6775 /* Controllers */,
 				3750531019E83A7E00607BAF /* Images.xcassets */,
+				3750532919EC355400607BAF /* Libraries */,
 				37D82F4219E8AF7300DF6775 /* Model */,
 				37D82F4519E8CBC700DF6775 /* Network Client */,
 				37D82F3B19E8AEFB00DF6775 /* Resources */,
 				37D82F4119E8AF6B00DF6775 /* Storyboards */,
 				3750530319E83A7E00607BAF /* Supporting Files */,
+				3750533219EC362900607BAF /* Validators */,
 				37D82F4419E8AF8000DF6775 /* Views */,
 			);
 			path = BeenThere;
@@ -92,8 +103,35 @@
 			children = (
 				3750530419E83A7E00607BAF /* Info.plist */,
 				3750530519E83A7E00607BAF /* main.m */,
+				3750533719EC714500607BAF /* BeenThere.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3750532919EC355400607BAF /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3750532A19EC35BA00607BAF /* UIViewLayout */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		3750532A19EC35BA00607BAF /* UIViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				3750532B19EC35BA00607BAF /* UIView+Layout.h */,
+				3750532C19EC35BA00607BAF /* UIView+Layout.m */,
+				3750532D19EC35BA00607BAF /* UIViewLayout.h */,
+			);
+			name = UIViewLayout;
+			path = Libraries/UIViewLayout;
+			sourceTree = "<group>";
+		};
+		3750533219EC362900607BAF /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Validators;
 			sourceTree = "<group>";
 		};
 		37D82F3B19E8AEFB00DF6775 /* Resources */ = {
@@ -109,6 +147,7 @@
 			children = (
 				3750530719E83A7E00607BAF /* AppDelegate.h */,
 				3750530819E83A7E00607BAF /* AppDelegate.m */,
+				3750533619EC620900607BAF /* Application.h */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -131,8 +170,10 @@
 		37D82F4319E8AF7800DF6775 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3750530A19E83A7E00607BAF /* ViewController.h */,
-				3750530B19E83A7E00607BAF /* ViewController.m */,
+				3750532F19EC35D500607BAF /* ViewController.h */,
+				3750533019EC35D500607BAF /* ViewController.m */,
+				3750533319EC597200607BAF /* LoginViewController.h */,
+				3750533419EC597200607BAF /* LoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -288,10 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3750533519EC597200607BAF /* LoginViewController.m in Sources */,
 				37D82F4F19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m in Sources */,
-				3750530C19E83A7E00607BAF /* ViewController.m in Sources */,
+				3750533119EC35D500607BAF /* ViewController.m in Sources */,
 				3750530919E83A7E00607BAF /* AppDelegate.m in Sources */,
 				37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */,
+				3750532E19EC35BA00607BAF /* UIView+Layout.m in Sources */,
 				3750530619E83A7E00607BAF /* main.m in Sources */,
 				37D82F4C19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m in Sources */,
 			);
@@ -334,6 +377,8 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BeenThere/BeenThere.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -374,6 +419,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BeenThere/BeenThere.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
