@@ -11,15 +11,16 @@
 
 #define kHoodieBaseURL  @"http://beenthereapp.dev:6001"
 
+// Third Party Libraries
+#import <HOOHoodie/HOOHoodie.h>
+#import "UIViewLayout.h"
+#import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
+#import <JVFloatLabeledTextField/JVFloatLabeledTextView.h>
 
 // Styles
 #import "UIColor+Styles.h"
 #import "UIButton+Styles.h"
-
-// Third Party Libraries
-#import <HOOHoodie/HOOHoodie.h>
-#import "UIViewLayout.h"
-
+#import "JVFloatLabeledTextField+Styles.h"
 
 // Managers
 #import "HoodieManager.h"

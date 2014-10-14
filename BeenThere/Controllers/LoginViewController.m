@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *createAccountButton;
 @property (weak, nonatomic) IBOutlet UIView *loginView;
 
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *usernameTextField;
+
 @end
 
 @implementation LoginViewController
@@ -37,6 +39,8 @@
     _loginView.y = 200;
     [_loginView moveToHorizontalCenterOfView:self.view];
     
+    [_usernameTextField darkStyledAttributedPlaceholder:@"Email Address"];
+    [_usernameTextField applyBeenThereDarkStyle];
     
 }
 

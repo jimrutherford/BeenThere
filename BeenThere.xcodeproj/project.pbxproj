@@ -18,6 +18,7 @@
 		3750533D19ED874500607BAF /* HoodieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533C19ED874500607BAF /* HoodieManager.m */; };
 		3750534119ED898500607BAF /* FadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534019ED898500607BAF /* FadeSegue.m */; };
 		3750534419ED8A6200607BAF /* MaskTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534319ED8A6200607BAF /* MaskTransition.m */; };
+		3750534719ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534619ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m */; };
 		37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 37892E4C19ECF169008BE88D /* UIColor+Styles.m */; };
 		37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */; };
 		37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */; };
@@ -52,6 +53,8 @@
 		3750534019ED898500607BAF /* FadeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FadeSegue.m; path = Segues/FadeSegue.m; sourceTree = "<group>"; };
 		3750534219ED8A6200607BAF /* MaskTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaskTransition.h; path = Segues/MaskTransition.h; sourceTree = "<group>"; };
 		3750534319ED8A6200607BAF /* MaskTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaskTransition.m; path = Segues/MaskTransition.m; sourceTree = "<group>"; };
+		3750534519ED8F3000607BAF /* JVFloatLabeledTextField+Styles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JVFloatLabeledTextField+Styles.h"; path = "Styles/JVFloatLabeledTextField+Styles.h"; sourceTree = "<group>"; };
+		3750534619ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JVFloatLabeledTextField+Styles.m"; path = "Styles/JVFloatLabeledTextField+Styles.m"; sourceTree = "<group>"; };
 		37892E4B19ECF169008BE88D /* UIColor+Styles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Styles.h"; path = "Styles/UIColor+Styles.h"; sourceTree = "<group>"; };
 		37892E4C19ECF169008BE88D /* UIColor+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Styles.m"; path = "Styles/UIColor+Styles.m"; sourceTree = "<group>"; };
 		37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Nanaimo.gpx; path = Resources/Nanaimo.gpx; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				37892E4C19ECF169008BE88D /* UIColor+Styles.m */,
 				3750533819ED7F6900607BAF /* UIButton+Styles.h */,
 				3750533919ED7F6900607BAF /* UIButton+Styles.m */,
+				3750534519ED8F3000607BAF /* JVFloatLabeledTextField+Styles.h */,
+				3750534619ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m */,
 			);
 			name = Styles;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 			files = (
 				3750533519EC597200607BAF /* LoginViewController.m in Sources */,
 				3750533D19ED874500607BAF /* HoodieManager.m in Sources */,
+				3750534719ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m in Sources */,
 				3750533A19ED7F6900607BAF /* UIButton+Styles.m in Sources */,
 				37D82F4F19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m in Sources */,
 				3750533119EC35D500607BAF /* ViewController.m in Sources */,
