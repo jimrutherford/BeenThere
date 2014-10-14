@@ -9,12 +9,22 @@
 #ifndef BeenThere_Application_h
 #define BeenThere_Application_h
 
-// styles
+#define kHoodieBaseURL  @"http://beenthereapp.dev:6001"
+
+
+// Styles
 #import "UIColor+Styles.h"
+#import "UIButton+Styles.h"
 
-
-
+// Third Party Libraries
+#import <HOOHoodie/HOOHoodie.h>
 #import "UIViewLayout.h"
+
+
+// Managers
+#import "HoodieManager.h"
+
+
 
 
 #endif
