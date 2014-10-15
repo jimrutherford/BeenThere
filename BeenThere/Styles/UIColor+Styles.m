@@ -30,4 +30,23 @@
     return [UIColor colorWithRed:0.4 green:0 blue:0 alpha:1];
 }
 
++(UIColor*) btYellowColor
+{
+    return [UIColor colorWithRed:0.75 green:0.74 blue:0.15 alpha:1];
+}
+
++(UIColor*) btDeepGrayColor
+{
+    return [UIColor colorWithRed:0.29 green:0.29 blue:0.29 alpha:1];
+}
+
++(UIColor*) btMediumGrayColor
+{
+    return [UIColor colorWithRed:0.61 green:0.61 blue:0.61 alpha:1];
+}
+
++(UIColor*) btLightGrayColor
+{
+    return [UIColor colorWithRed:0.93 green:0.93 blue:0.93 alpha:1];
+}
 @end

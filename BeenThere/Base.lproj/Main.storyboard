@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="nuN-KD-sYf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="bCs-uL-Dau">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="fSj-8C-8Zj">
             <objects>
-                <tableViewController id="j1m-0f-NOv" customClass="ViewController" sceneMemberID="viewController">
+                <tableViewController id="j1m-0f-NOv" customClass="HomeViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3ES-DT-Bv6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +26,9 @@
                             <outlet property="delegate" destination="j1m-0f-NOv" id="2lO-N5-oOh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="YvE-Ez-lrd"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="YvE-Ez-lrd">
+                        <barButtonItem key="rightBarButtonItem" image="addPlaceButton" style="plain" id="hgE-HZ-y1N"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFf-Hq-Yz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +149,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addPlaceButton" width="26" height="29"/>
         <image name="launchBackground" width="375" height="667"/>
         <image name="launchLogo" width="301" height="279"/>
     </resources>
