@@ -6,19 +6,21 @@
 //  Copyright (c) 2014 Taptonics. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeViewController.h"
 #import "FourSquareAPIClient.h"
 
 
-@interface ViewController ()
+@interface HomeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navBarTitle"]];
+    self.navigationItem.titleView = titleView;
 }
 
 - (void) viewDidAppear:(BOOL)animated

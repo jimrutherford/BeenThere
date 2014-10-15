@@ -12,7 +12,7 @@
 		3750530F19E83A7E00607BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3750530D19E83A7E00607BAF /* Main.storyboard */; };
 		3750531119E83A7E00607BAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3750531019E83A7E00607BAF /* Images.xcassets */; };
 		3750532E19EC35BA00607BAF /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750532C19EC35BA00607BAF /* UIView+Layout.m */; };
-		3750533119EC35D500607BAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533019EC35D500607BAF /* ViewController.m */; };
+		3750533119EC35D500607BAF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533019EC35D500607BAF /* HomeViewController.m */; };
 		3750533519EC597200607BAF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533419EC597200607BAF /* LoginViewController.m */; };
 		3750533A19ED7F6900607BAF /* UIButton+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533919ED7F6900607BAF /* UIButton+Styles.m */; };
 		3750533D19ED874500607BAF /* HoodieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750533C19ED874500607BAF /* HoodieManager.m */; };
@@ -20,6 +20,7 @@
 		3750534419ED8A6200607BAF /* MaskTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534319ED8A6200607BAF /* MaskTransition.m */; };
 		3750534719ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534619ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m */; };
 		37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 37892E4C19ECF169008BE88D /* UIColor+Styles.m */; };
+		37892E5019EE0105008BE88D /* AppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37892E4F19EE0105008BE88D /* AppearanceManager.m */; };
 		37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */; };
 		37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */; };
 		37D82F4C19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D82F4B19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m */; };
@@ -39,8 +40,8 @@
 		3750532B19EC35BA00607BAF /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		3750532C19EC35BA00607BAF /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		3750532D19EC35BA00607BAF /* UIViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewLayout.h; sourceTree = "<group>"; };
-		3750532F19EC35D500607BAF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controllers/ViewController.h; sourceTree = "<group>"; };
-		3750533019EC35D500607BAF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controllers/ViewController.m; sourceTree = "<group>"; };
+		3750532F19EC35D500607BAF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Controllers/HomeViewController.h; sourceTree = "<group>"; };
+		3750533019EC35D500607BAF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Controllers/HomeViewController.m; sourceTree = "<group>"; };
 		3750533319EC597200607BAF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/LoginViewController.h; sourceTree = "<group>"; };
 		3750533419EC597200607BAF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/LoginViewController.m; sourceTree = "<group>"; };
 		3750533619EC620900607BAF /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -57,6 +58,8 @@
 		3750534619ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JVFloatLabeledTextField+Styles.m"; path = "Styles/JVFloatLabeledTextField+Styles.m"; sourceTree = "<group>"; };
 		37892E4B19ECF169008BE88D /* UIColor+Styles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Styles.h"; path = "Styles/UIColor+Styles.h"; sourceTree = "<group>"; };
 		37892E4C19ECF169008BE88D /* UIColor+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Styles.m"; path = "Styles/UIColor+Styles.m"; sourceTree = "<group>"; };
+		37892E4E19EE0105008BE88D /* AppearanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearanceManager.h; path = Styles/AppearanceManager.h; sourceTree = "<group>"; };
+		37892E4F19EE0105008BE88D /* AppearanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearanceManager.m; path = Styles/AppearanceManager.m; sourceTree = "<group>"; };
 		37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Nanaimo.gpx; path = Resources/Nanaimo.gpx; sourceTree = "<group>"; };
 		37D82F4619E8CBF200DF6775 /* FourSquareAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareAPIClient.h; path = "Network Client/FourSquareAPIClient.h"; sourceTree = "<group>"; };
 		37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareAPIClient.m; path = "Network Client/FourSquareAPIClient.m"; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				3750533919ED7F6900607BAF /* UIButton+Styles.m */,
 				3750534519ED8F3000607BAF /* JVFloatLabeledTextField+Styles.h */,
 				3750534619ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m */,
+				37892E4E19EE0105008BE88D /* AppearanceManager.h */,
+				37892E4F19EE0105008BE88D /* AppearanceManager.m */,
 			);
 			name = Styles;
 			sourceTree = "<group>";
@@ -216,8 +221,8 @@
 		37D82F4319E8AF7800DF6775 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3750532F19EC35D500607BAF /* ViewController.h */,
-				3750533019EC35D500607BAF /* ViewController.m */,
+				3750532F19EC35D500607BAF /* HomeViewController.h */,
+				3750533019EC35D500607BAF /* HomeViewController.m */,
 				3750533319EC597200607BAF /* LoginViewController.h */,
 				3750533419EC597200607BAF /* LoginViewController.m */,
 			);
@@ -380,7 +385,8 @@
 				3750534719ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m in Sources */,
 				3750533A19ED7F6900607BAF /* UIButton+Styles.m in Sources */,
 				37D82F4F19E8CD9800DF6775 /* FourSquareJSONRequestSerializer.m in Sources */,
-				3750533119EC35D500607BAF /* ViewController.m in Sources */,
+				3750533119EC35D500607BAF /* HomeViewController.m in Sources */,
+				37892E5019EE0105008BE88D /* AppearanceManager.m in Sources */,
 				3750530919E83A7E00607BAF /* AppDelegate.m in Sources */,
 				37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */,
 				3750534119ED898500607BAF /* FadeSegue.m in Sources */,

@@ -16,4 +16,10 @@
 +(UIColor*) btDarkRedColor;
 +(UIColor*) btDeepRedColor;
 
++(UIColor*) btYellowColor;
+
++(UIColor*) btDeepGrayColor;
++(UIColor*) btMediumGrayColor;
++(UIColor*) btLightGrayColor;
+
 @end
