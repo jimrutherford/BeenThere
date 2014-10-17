@@ -245,3 +245,4 @@
 [Wed, 15 Oct 2014 15:13:26 GMT] [info] [<0.4974.13>] 127.0.0.1 - - GET /user%2Ffigzity/_changes?feed=normal&heartbeat=300000&style=all_docs 401
 [Wed, 15 Oct 2014 15:23:26 GMT] [info] [<0.5584.13>] 127.0.0.1 - - GET /user%2Ffigzity/_changes?feed=normal&heartbeat=300000&style=all_docs 401
 [Wed, 15 Oct 2014 15:33:26 GMT] [info] [<0.8024.13>] 127.0.0.1 - - GET /user%2Ffigzity/_changes?feed=normal&heartbeat=300000&style=all_docs 401
+[Wed, 15 Oct 2014 15:43:26 GMT] [info] [<0.6194.13>] 127.0.0.1 - - GET /user%2Ffigzity/_changes?feed=normal&heartbeat=300000&style=all_docs 401

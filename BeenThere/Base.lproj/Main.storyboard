@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="bCs-uL-Dau">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="bCs-uL-Dau">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="fSj-8C-8Zj">
             <objects>
                 <tableViewController id="j1m-0f-NOv" customClass="HomeViewController" sceneMemberID="viewController">
@@ -26,13 +25,67 @@
                             <outlet property="delegate" destination="j1m-0f-NOv" id="2lO-N5-oOh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="YvE-Ez-lrd">
-                        <barButtonItem key="rightBarButtonItem" image="addPlaceButton" style="plain" id="hgE-HZ-y1N"/>
+                    <navigationItem key="navigationItem" title="Home" id="YvE-Ez-lrd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gCH-rC-lFW"/>
+                        <barButtonItem key="rightBarButtonItem" image="addPlaceButton" style="plain" id="hgE-HZ-y1N">
+                            <connections>
+                                <segue destination="Vpf-g0-Yrs" kind="push" id="ArT-10-7dh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFf-Hq-Yz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="-799"/>
+            <point key="canvasLocation" x="375" y="-799"/>
+        </scene>
+        <!--Been There-->
+        <scene sceneID="Nje-Ph-Duo">
+            <objects>
+                <viewController id="Vpf-g0-Yrs" customClass="SelectLocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ah-Ac-rBe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="4k8-DH-59m">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectLocationPin" id="oaB-od-Thy">
+                                <rect key="frame" x="145" y="154" width="30" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" id="spK-wf-CWu">
+                                <rect key="frame" x="-6" y="298" width="334" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Sit-Hk-Mpj">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="270"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ax5-oY-3Ha">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="270"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </tableView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Been There" id="FKM-s2-j3H">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gbZ-HS-vsj"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blurView" destination="spK-wf-CWu" id="RRr-SL-XRX"/>
+                        <outlet property="mapPin" destination="oaB-od-Thy" id="M6e-Ph-ZXD"/>
+                        <outlet property="mapView" destination="4k8-DH-59m" id="eBs-HW-IyU"/>
+                        <outlet property="placesTableView" destination="ax5-oY-3Ha" id="yYl-wt-dlD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yne-JY-3iG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="-812"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RUc-rD-4DM">
@@ -152,6 +205,7 @@
         <image name="addPlaceButton" width="26" height="29"/>
         <image name="launchBackground" width="375" height="667"/>
         <image name="launchLogo" width="301" height="279"/>
+        <image name="selectLocationPin" width="34" height="45"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

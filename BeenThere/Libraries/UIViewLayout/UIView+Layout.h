@@ -143,6 +143,9 @@ typedef void(^ActionBlock)();
 #pragma mark - Sizing
 
 - (void) resizeToFillScreen;
+- (void) resizeToScreenWidth;
+- (void) resizeToScreenHeight;
+- (void) pinToBottomOfView:(UIView*)view;
 
 /** Ensures that the view has called -layoutSubviews before calling -sizeToFit. */
 - (void)forceLayoutAndSizeToFit;

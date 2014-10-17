@@ -19,6 +19,12 @@
 		3750534119ED898500607BAF /* FadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534019ED898500607BAF /* FadeSegue.m */; };
 		3750534419ED8A6200607BAF /* MaskTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534319ED8A6200607BAF /* MaskTransition.m */; };
 		3750534719ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534619ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m */; };
+		3750534919EECF3C00607BAF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3750534819EECF3C00607BAF /* MapKit.framework */; };
+		3750534B19EECF4400607BAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3750534A19EECF4400607BAF /* CoreLocation.framework */; };
+		3750534E19EED3C900607BAF /* SelectLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750534D19EED3C900607BAF /* SelectLocationViewController.m */; };
+		3750535119EF32B200607BAF /* GooglePlacesClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750535019EF32B200607BAF /* GooglePlacesClient.m */; };
+		3750535419F0240B00607BAF /* FourSquarePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750535319F0240B00607BAF /* FourSquarePlace.m */; };
+		3763EB4419F1C0D0004B9546 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763EB4319F1C0D0004B9546 /* MKMapView+ZoomLevel.m */; };
 		37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 37892E4C19ECF169008BE88D /* UIColor+Styles.m */; };
 		37892E5019EE0105008BE88D /* AppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37892E4F19EE0105008BE88D /* AppearanceManager.m */; };
 		37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */; };
@@ -56,6 +62,16 @@
 		3750534319ED8A6200607BAF /* MaskTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaskTransition.m; path = Segues/MaskTransition.m; sourceTree = "<group>"; };
 		3750534519ED8F3000607BAF /* JVFloatLabeledTextField+Styles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JVFloatLabeledTextField+Styles.h"; path = "Styles/JVFloatLabeledTextField+Styles.h"; sourceTree = "<group>"; };
 		3750534619ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JVFloatLabeledTextField+Styles.m"; path = "Styles/JVFloatLabeledTextField+Styles.m"; sourceTree = "<group>"; };
+		3750534819EECF3C00607BAF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3750534A19EECF4400607BAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3750534C19EED3C900607BAF /* SelectLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectLocationViewController.h; path = Controllers/SelectLocationViewController.h; sourceTree = "<group>"; };
+		3750534D19EED3C900607BAF /* SelectLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectLocationViewController.m; path = Controllers/SelectLocationViewController.m; sourceTree = "<group>"; };
+		3750534F19EF32B200607BAF /* GooglePlacesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlacesClient.h; path = "Network Client/GooglePlacesClient.h"; sourceTree = "<group>"; };
+		3750535019EF32B200607BAF /* GooglePlacesClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlacesClient.m; path = "Network Client/GooglePlacesClient.m"; sourceTree = "<group>"; };
+		3750535219F0240B00607BAF /* FourSquarePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquarePlace.h; path = Model/FourSquarePlace.h; sourceTree = "<group>"; };
+		3750535319F0240B00607BAF /* FourSquarePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquarePlace.m; path = Model/FourSquarePlace.m; sourceTree = "<group>"; };
+		3763EB4219F1C0D0004B9546 /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+ZoomLevel.h"; path = "Categories/MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		3763EB4319F1C0D0004B9546 /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+ZoomLevel.m"; path = "Categories/MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
 		37892E4B19ECF169008BE88D /* UIColor+Styles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Styles.h"; path = "Styles/UIColor+Styles.h"; sourceTree = "<group>"; };
 		37892E4C19ECF169008BE88D /* UIColor+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Styles.m"; path = "Styles/UIColor+Styles.m"; sourceTree = "<group>"; };
 		37892E4E19EE0105008BE88D /* AppearanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearanceManager.h; path = Styles/AppearanceManager.h; sourceTree = "<group>"; };
@@ -76,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3750534B19EECF4400607BAF /* CoreLocation.framework in Frameworks */,
+				3750534919EECF3C00607BAF /* MapKit.framework in Frameworks */,
 				E0D320E0D56ADEC36F7E4FF3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				37D82F4019E8AF4600DF6775 /* Application */,
+				3763EB4119F1C095004B9546 /* Categories */,
 				37D82F4319E8AF7800DF6775 /* Controllers */,
 				3750531019E83A7E00607BAF /* Images.xcassets */,
 				3750532919EC355400607BAF /* Libraries */,
@@ -168,6 +187,15 @@
 			name = Segues;
 			sourceTree = "<group>";
 		};
+		3763EB4119F1C095004B9546 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3763EB4219F1C0D0004B9546 /* MKMapView+ZoomLevel.h */,
+				3763EB4319F1C0D0004B9546 /* MKMapView+ZoomLevel.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		37892E4A19ECF126008BE88D /* Styles */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +242,8 @@
 			children = (
 				3750533B19ED874500607BAF /* HoodieManager.h */,
 				3750533C19ED874500607BAF /* HoodieManager.m */,
+				3750535219F0240B00607BAF /* FourSquarePlace.h */,
+				3750535319F0240B00607BAF /* FourSquarePlace.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -225,6 +255,8 @@
 				3750533019EC35D500607BAF /* HomeViewController.m */,
 				3750533319EC597200607BAF /* LoginViewController.h */,
 				3750533419EC597200607BAF /* LoginViewController.m */,
+				3750534C19EED3C900607BAF /* SelectLocationViewController.h */,
+				3750534D19EED3C900607BAF /* SelectLocationViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -239,9 +271,11 @@
 		37D82F4519E8CBC700DF6775 /* Network Client */ = {
 			isa = PBXGroup;
 			children = (
-				37D82F4919E8CD3500DF6775 /* Serializers */,
 				37D82F4619E8CBF200DF6775 /* FourSquareAPIClient.h */,
 				37D82F4719E8CBF200DF6775 /* FourSquareAPIClient.m */,
+				3750534F19EF32B200607BAF /* GooglePlacesClient.h */,
+				3750535019EF32B200607BAF /* GooglePlacesClient.m */,
+				37D82F4919E8CD3500DF6775 /* Serializers */,
 			);
 			name = "Network Client";
 			sourceTree = "<group>";
@@ -269,6 +303,8 @@
 		B2638A64A0F189760A7E9289 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3750534A19EECF4400607BAF /* CoreLocation.framework */,
+				3750534819EECF3C00607BAF /* MapKit.framework */,
 				97773A3A90A2E8721A16B077 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -381,6 +417,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3750533519EC597200607BAF /* LoginViewController.m in Sources */,
+				3750534E19EED3C900607BAF /* SelectLocationViewController.m in Sources */,
+				3763EB4419F1C0D0004B9546 /* MKMapView+ZoomLevel.m in Sources */,
 				3750533D19ED874500607BAF /* HoodieManager.m in Sources */,
 				3750534719ED8F3000607BAF /* JVFloatLabeledTextField+Styles.m in Sources */,
 				3750533A19ED7F6900607BAF /* UIButton+Styles.m in Sources */,
@@ -389,12 +427,14 @@
 				37892E5019EE0105008BE88D /* AppearanceManager.m in Sources */,
 				3750530919E83A7E00607BAF /* AppDelegate.m in Sources */,
 				37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */,
+				3750535419F0240B00607BAF /* FourSquarePlace.m in Sources */,
 				3750534119ED898500607BAF /* FadeSegue.m in Sources */,
 				37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */,
 				3750532E19EC35BA00607BAF /* UIView+Layout.m in Sources */,
 				3750530619E83A7E00607BAF /* main.m in Sources */,
 				3750534419ED8A6200607BAF /* MaskTransition.m in Sources */,
 				37D82F4C19E8CD6F00DF6775 /* FourSquareJSONResponseSerializer.m in Sources */,
+				3750535119EF32B200607BAF /* GooglePlacesClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +540,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BeenThere/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -513,6 +554,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BeenThere/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

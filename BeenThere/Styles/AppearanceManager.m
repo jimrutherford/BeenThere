@@ -15,6 +15,9 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor btDarkRedColor]];
     
     [[UIBarButtonItem appearance] setTintColor:[UIColor btLightGrayColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor btLightGrayColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor btLightGrayColor]}];
+    
 }
 
 

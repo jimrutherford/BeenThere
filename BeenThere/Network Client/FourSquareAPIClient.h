@@ -15,6 +15,14 @@
 
 + (FourSquareAPIClient *)sharedClient;
 
-- (void) searchWithCurrentLcoation:(CLLocationCoordinate2D)coordinate;
+- (void) searchWithCurrentLocation:(CLLocationCoordinate2D)coordinate
+                           success:( void (^)(NSArray *results) ) success
+                           failure:( void (^)(NSError *error) ) failure;
+
+
+- (void) searchVenuesWithSouthWest:(CLLocationCoordinate2D)swCoordinate
+                         northEast:(CLLocationCoordinate2D)neCoordinate
+                           success:( void (^)(NSArray *results) ) success
+                           failure:( void (^)(NSError *error) ) failure;
 
 @end

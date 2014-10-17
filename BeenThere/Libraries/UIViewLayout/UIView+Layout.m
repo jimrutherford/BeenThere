@@ -287,6 +287,21 @@
     self.origin = CGPointZero;
 }
 
+- (void) resizeToScreenWidth
+{
+    self.width = [[UIScreen mainScreen] bounds].size.width;
+}
+
+- (void) resizeToScreenHeight
+{
+    self.height = [[UIScreen mainScreen] bounds].size.height;
+}
+
+- (void) pinToBottomOfView:(UIView*)view
+{
+    self.y = view.boundsHeight - self.boundsHeight;
+}
+
 - (void)forceLayoutAndSizeToFit
 {
 	[self setNeedsLayout];

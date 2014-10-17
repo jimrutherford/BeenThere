@@ -249,3 +249,4 @@ Apache CouchDB has started. Time to relax.
 [info] [<0.4974.13>] 127.0.0.1 - - GET /user%2Ffigzity/_changes?feed=normal&heartbeat=300000&style=all_docs 401
 [info] [<0.5584.13>] 127.0.0.1 - - GET /user%2Ffigzity/_changes?feed=normal&heartbeat=300000&style=all_docs 401
 [info] [<0.8024.13>] 127.0.0.1 - - GET /user%2Ffigzity/_changes?feed=normal&heartbeat=300000&style=all_docs 401
+[info] [<0.6194.13>] 127.0.0.1 - - GET /user%2Ffigzity/_changes?feed=normal&heartbeat=300000&style=all_docs 401

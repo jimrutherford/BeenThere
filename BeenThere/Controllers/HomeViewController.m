@@ -31,9 +31,9 @@
 
 - (void) searchForLocation
 {
-    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(49.163522, -123.937283);
+    //CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(49.163522, -123.937283);
     
-    [[FourSquareAPIClient sharedClient] searchWithCurrentLcoation:coord];
+    //[[FourSquareAPIClient sharedClient] searchWithCurrentLcoation:coord];
 }
 
 - (void)didReceiveMemoryWarning {
