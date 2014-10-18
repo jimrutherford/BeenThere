@@ -25,6 +25,7 @@
 		3750535119EF32B200607BAF /* GooglePlacesClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750535019EF32B200607BAF /* GooglePlacesClient.m */; };
 		3750535419F0240B00607BAF /* FourSquarePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750535319F0240B00607BAF /* FourSquarePlace.m */; };
 		3763EB4419F1C0D0004B9546 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763EB4319F1C0D0004B9546 /* MKMapView+ZoomLevel.m */; };
+		3763EB4719F1EE6A004B9546 /* AddDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763EB4619F1EE6A004B9546 /* AddDetailsViewController.m */; };
 		37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 37892E4C19ECF169008BE88D /* UIColor+Styles.m */; };
 		37892E5019EE0105008BE88D /* AppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37892E4F19EE0105008BE88D /* AppearanceManager.m */; };
 		37D82F3F19E8AF3700DF6775 /* Nanaimo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 37D82F3E19E8AF3700DF6775 /* Nanaimo.gpx */; };
@@ -72,6 +73,8 @@
 		3750535319F0240B00607BAF /* FourSquarePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquarePlace.m; path = Model/FourSquarePlace.m; sourceTree = "<group>"; };
 		3763EB4219F1C0D0004B9546 /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+ZoomLevel.h"; path = "Categories/MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
 		3763EB4319F1C0D0004B9546 /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+ZoomLevel.m"; path = "Categories/MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
+		3763EB4519F1EE6A004B9546 /* AddDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddDetailsViewController.h; path = Controllers/AddDetailsViewController.h; sourceTree = "<group>"; };
+		3763EB4619F1EE6A004B9546 /* AddDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddDetailsViewController.m; path = Controllers/AddDetailsViewController.m; sourceTree = "<group>"; };
 		37892E4B19ECF169008BE88D /* UIColor+Styles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Styles.h"; path = "Styles/UIColor+Styles.h"; sourceTree = "<group>"; };
 		37892E4C19ECF169008BE88D /* UIColor+Styles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Styles.m"; path = "Styles/UIColor+Styles.m"; sourceTree = "<group>"; };
 		37892E4E19EE0105008BE88D /* AppearanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearanceManager.h; path = Styles/AppearanceManager.h; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				3750533419EC597200607BAF /* LoginViewController.m */,
 				3750534C19EED3C900607BAF /* SelectLocationViewController.h */,
 				3750534D19EED3C900607BAF /* SelectLocationViewController.m */,
+				3763EB4519F1EE6A004B9546 /* AddDetailsViewController.h */,
+				3763EB4619F1EE6A004B9546 /* AddDetailsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -427,6 +432,7 @@
 				37892E5019EE0105008BE88D /* AppearanceManager.m in Sources */,
 				3750530919E83A7E00607BAF /* AppDelegate.m in Sources */,
 				37892E4D19ECF169008BE88D /* UIColor+Styles.m in Sources */,
+				3763EB4719F1EE6A004B9546 /* AddDetailsViewController.m in Sources */,
 				3750535419F0240B00607BAF /* FourSquarePlace.m in Sources */,
 				3750534119ED898500607BAF /* FadeSegue.m in Sources */,
 				37D82F4819E8CBF200DF6775 /* FourSquareAPIClient.m in Sources */,

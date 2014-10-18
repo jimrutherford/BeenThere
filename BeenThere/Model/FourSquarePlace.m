@@ -17,6 +17,14 @@
     place.placeId = venue[@"id"];
     place.placeName = venue[@"name"];
     
+    if (venue[@"categories"][0])
+    {
+        NSDictionary *iconDict = venue[@"categories"][0][@"icon"];
+        NSString *icon = [NSString stringWithFormat:@"%@64%@", iconDict[@"prefix"], iconDict[@"suffix"]];
+        
+        place.iconURL = [NSURL URLWithString:icon];
+    }
+    
     return place;
 }
 

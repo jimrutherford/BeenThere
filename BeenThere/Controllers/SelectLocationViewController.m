@@ -12,6 +12,8 @@
 #import "FourSquareAPIClient.h"
 #import "FourSquarePlace.h"
 #import "MKMapView+ZoomLevel.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
+
 
 #define mapWindowHeight 300
 
@@ -158,15 +160,28 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        cell.backgroundColor = [UIColor clearColor];
+        cell.contentView.backgroundColor = [UIColor clearColor];
+
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:23.0f];
+        cell.textLabel.textColor = [UIColor btLightGrayColor];
+        
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     FourSquarePlace *place = _places[indexPath.row];
     
-    cell.backgroundColor = [UIColor clearColor];
-    cell.contentView.backgroundColor = [UIColor clearColor];
-    
     cell.textLabel.text = place.placeName;
+    
+    if (place.iconURL)
+    {
+        [cell.imageView setImageWithURL:place.iconURL];
+    }
+    
     return cell;
 }
 
@@ -177,7 +192,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    return 64;
 }
 
 #pragma mark - Tableview delegate
