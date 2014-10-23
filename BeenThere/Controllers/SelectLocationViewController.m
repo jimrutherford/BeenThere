@@ -12,8 +12,7 @@
 #import "FourSquareAPIClient.h"
 #import "FourSquarePlace.h"
 #import "MKMapView+ZoomLevel.h"
-#import <AFNetworking/UIImageView+AFNetworking.h>
-
+#import "AddDetailsViewController.h"
 
 #define mapWindowHeight 300
 
@@ -34,9 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //self.edgesForExtendedLayout=UIRectEdgeNone;
-    //self.automaticallyAdjustsScrollViewInsets=NO;
-    
     _placesTableView.delegate = self;
     _placesTableView.dataSource = self;
     
@@ -45,7 +41,6 @@
     UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"beenThereNavTitle"]];
     self.navigationItem.titleView = titleView;
     
-    
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(gestureHandler:)];
     panGesture.delegate = self;
     [_mapView addGestureRecognizer:panGesture];
@@ -53,8 +48,6 @@
     UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(gestureHandler:)];
     pinchGesture.delegate = self;
     [_mapView addGestureRecognizer:pinchGesture];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,13 +55,14 @@
     
     _blurView.height = _mapView.height - mapWindowHeight;
     
-    
     _blurView.x = 0;
     [_blurView resizeToScreenWidth];
     [_blurView pinToBottomOfView:self.view];
     
     [_mapPin moveToHorizontalCenterOfView:_mapView];
     _mapPin.y = mapWindowHeight / 2;
+    
+    _mapView.centerCoordinate = CLLocationCoordinate2DMake(16.099365, -122.913987);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,7 +76,6 @@
 
 - (void) gestureHandler:(UIGestureRecognizer*) gesture
 {
-    NSLog(@"Zoom Level: %lu", (unsigned long)[_mapView getZoomLevel]);
     
     if (gesture.state == UIGestureRecognizerStateBegan)
     {
@@ -103,12 +96,6 @@
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    CGPoint point = CGPointMake(_mapPin.x + (_mapPin.width / 2), _mapPin.y + _mapPin.height);
-    CLLocationCoordinate2D mapPoint = [_mapView convertPoint:point toCoordinateFromView:self.view];
-    
-    NSLog(@"Center %f : %f", mapPoint.latitude, mapPoint.longitude);
-    
-    
     if ([_mapView getZoomLevel] > 12)
     {
         // search for venues
@@ -118,7 +105,7 @@
         CGPoint swPoint = CGPointMake(0, mapWindowHeight);
         CLLocationCoordinate2D swMapPoint = [_mapView convertPoint:swPoint toCoordinateFromView:self.view];
         
-        NSLog(@"NE %f : %f \nSW %f : %f", neMapPoint.latitude, neMapPoint.longitude, swMapPoint.latitude, swMapPoint.longitude);
+        //NSLog(@"NE %f : %f \nSW %f : %f", neMapPoint.latitude, neMapPoint.longitude, swMapPoint.latitude, swMapPoint.longitude);
         
         [[FourSquareAPIClient sharedClient] searchVenuesWithSouthWest:swMapPoint northEast:neMapPoint success:^(NSArray *results) {
             
@@ -135,7 +122,8 @@
         CGPoint point = CGPointMake(_mapPin.x + (_mapPin.width / 2), _mapPin.y + _mapPin.height);
         CLLocationCoordinate2D mapPoint = [_mapView convertPoint:point toCoordinateFromView:self.view];
         
-        NSLog(@"Center %f : %f", mapPoint.latitude, mapPoint.longitude);
+        //CLLocationCoordinate2D centerPoint = _mapView.centerCoordinate;
+        //NSLog(@"Center %f : %f", centerPoint.latitude, centerPoint.longitude);
         
         [[FourSquareAPIClient sharedClient] searchWithCurrentLocation:mapPoint success:^(NSArray *results) {
             
@@ -147,9 +135,7 @@
             NSLog(@"Error %@", error);
         }];
     }
-    
 
-    
 }
 
 #pragma mark - Tableview datasource
@@ -179,7 +165,7 @@
     
     if (place.iconURL)
     {
-        [cell.imageView setImageWithURL:place.iconURL];
+        [cell.imageView setImageWithURL:place.iconURL placeholderImage:[UIImage imageNamed:@"pinPlaceholder"]];
     }
     
     return cell;
@@ -199,18 +185,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    FourSquarePlace *place = _places[indexPath.row];
+    [self performSegueWithIdentifier:@"addDetailsSegue" sender:place];
 }
 
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    AddDetailsViewController *addVC = [segue destinationViewController];
+    addVC.place = (FourSquarePlace*)sender;
 }
-*/
+
 
 @end

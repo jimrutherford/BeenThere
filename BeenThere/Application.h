@@ -13,6 +13,7 @@
 
 // Third Party Libraries
 #import <HOOHoodie/HOOHoodie.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 #import "UIViewLayout.h"
 #import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
 #import <JVFloatLabeledTextField/JVFloatLabeledTextView.h>
@@ -21,6 +22,7 @@
 #import "UIColor+Styles.h"
 #import "UIButton+Styles.h"
 #import "JVFloatLabeledTextField+Styles.h"
+#import "JVFloatLabeledTextView+Styles.h"
 
 // Managers
 #import "HoodieManager.h"

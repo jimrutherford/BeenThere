@@ -14,5 +14,5 @@
 - (void) applyBeenThereLightStyle;
 
 - (void) darkStyledAttributedPlaceholder:(NSString*) placeholder;
-
+- (void) lightStyledAttributedPlaceholder:(NSString*) placeholder;
 @end

@@ -59,9 +59,21 @@
 
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    [super viewDidAppear:animated];;
     
-    [self performSelector:@selector(revealLoginButtons) withObject:nil afterDelay:1.0];
+    
+    [hoodieManager.hoodie.account automaticallySignInExistingUser:^(BOOL existingUser, NSError *error) {
+        
+        if (existingUser) {
+            [self performSegueWithIdentifier:@"authSegue" sender:self];
+        } else {
+            
+            [self performSelector:@selector(revealLoginButtons) withObject:nil afterDelay:1.0];
+        }
+
+        
+    }];
+    
 }
 
 - (void) revealLoginButtons

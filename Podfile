@@ -3,9 +3,12 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
 pod 'AFNetworking'
 
-pod "HOOHoodie"
-pod "INTULocationManager"
+pod 'HOOHoodie'
+pod 'INTULocationManager'
 
 pod 'JVFloatLabeledTextField'

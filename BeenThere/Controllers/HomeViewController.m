@@ -12,6 +12,8 @@
 
 @interface HomeViewController ()
 
+@property (nonatomic, strong) NSArray *beenTheres;
+
 @end
 
 @implementation HomeViewController
@@ -26,15 +28,45 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self searchForLocation];
+    
+    _beenTheres = [hoodieManager.hoodie.store findAllObjectsWithType:@"been"];
+    [self.tableView reloadData];
 }
 
-- (void) searchForLocation
-{
-    //CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(49.163522, -123.937283);
+#pragma mark - Tableview datasource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
     
-    //[[FourSquareAPIClient sharedClient] searchWithCurrentLcoation:coord];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSDictionary *beenThere = [_beenTheres objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = beenThere[@"placeName"];
+    return cell;
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [_beenTheres count];;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 64;
+}
+
+#pragma mark - Tableview delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

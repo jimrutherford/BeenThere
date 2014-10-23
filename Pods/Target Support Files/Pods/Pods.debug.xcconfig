@@ -3,4 +3,5 @@ GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/HOOHoodie" "${PODS_ROOT}/Headers/Public/INTULocationManager" "${PODS_ROOT}/Headers/Public/JVFloatLabeledTextField"
 OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/FMDB" -isystem "${PODS_ROOT}/Headers/Public/HOOHoodie" -isystem "${PODS_ROOT}/Headers/Public/INTULocationManager" -isystem "${PODS_ROOT}/Headers/Public/JVFloatLabeledTextField"
 OTHER_LDFLAGS = -ObjC -weak_library /usr/lib/libz.dylib -l"Pods-AFNetworking" -l"Pods-FMDB" -l"Pods-HOOHoodie" -l"Pods-INTULocationManager" -l"Pods-JVFloatLabeledTextField" -l"sqlite3" -framework "CoreGraphics" -framework "CouchbaseLite" -framework "Foundation" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

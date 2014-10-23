@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="bCs-uL-Dau">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="nuN-KD-sYf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -81,7 +81,7 @@
                         <outlet property="mapPin" destination="oaB-od-Thy" id="M6e-Ph-ZXD"/>
                         <outlet property="mapView" destination="4k8-DH-59m" id="eBs-HW-IyU"/>
                         <outlet property="placesTableView" destination="ax5-oY-3Ha" id="yYl-wt-dlD"/>
-                        <segue destination="9jb-XX-Ce4" kind="push" id="8Hl-fj-eWj"/>
+                        <segue destination="9jb-XX-Ce4" kind="push" identifier="addDetailsSegue" id="8Hl-fj-eWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yne-JY-3iG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,11 +95,44 @@
                     <view key="view" contentMode="scaleToFill" id="gN2-bg-nda">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aXl-de-uFD">
+                                <rect key="frame" x="57" y="93" width="247" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zIF-JQ-8sw">
+                                <rect key="frame" x="16" y="92" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="HWY-CR-u0k" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="154" width="288" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Kkl-a0-VYn" customClass="JVFloatLabeledTextView">
+                                <rect key="frame" x="16" y="206" width="288" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Done That" id="2pQ-gT-NDK">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="uNH-EI-Kzb"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="uNH-EI-Kzb">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="9jb-XX-Ce4" id="Y7z-8D-UjP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailsTextView" destination="Kkl-a0-VYn" id="6oL-Iy-VP6"/>
+                        <outlet property="placeIcon" destination="zIF-JQ-8sw" id="E8L-e9-0Gp"/>
+                        <outlet property="placeName" destination="aXl-de-uFD" id="CJh-Oi-iXO"/>
+                        <outlet property="whenTextField" destination="HWY-CR-u0k" id="hIZ-gU-wfr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z88-85-i8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

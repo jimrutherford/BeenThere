@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSString *placeId;
 @property (nonatomic, strong) NSString *placeName;
 @property (nonatomic, strong) NSURL *iconURL;
-
+@property (nonatomic, strong) NSURL *iconDarkURL;
 +(instancetype) initWithVenueDictionary:(NSDictionary*)venue;
 
 @end
