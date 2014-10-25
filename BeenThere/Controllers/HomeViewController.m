@@ -25,6 +25,21 @@
     self.navigationItem.titleView = titleView;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSDictionary *beenDone = @{@"placeName": @"SquareOne"};
+    
+    [hoodieManager.hoodie.store saveObject:beenDone
+                                  withType:@"been"
+                                    onSave:^(NSDictionary *object, NSError *error) {
+                                        if (!error)
+                                        {
+                                            [self.navigationController popToRootViewControllerAnimated:YES];
+                                        }
+                                    }];
+}
+
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];

@@ -65,6 +65,8 @@
     [hoodieManager.hoodie.account automaticallySignInExistingUser:^(BOOL existingUser, NSError *error) {
         
         if (existingUser) {
+            NSString *username = hoodieManager.hoodie.account.username;
+            [hoodieManager.hoodie.store setAccountDatabaseForUsername:username];
             [self performSegueWithIdentifier:@"authSegue" sender:self];
         } else {
             
@@ -145,6 +147,8 @@
                                             onSignUp:^(BOOL signUpSuccessful, NSError *error) {
                                                 if (!error)
                                                 {
+                                                    NSString *username = hoodieManager.hoodie.account.username;
+                                                    [hoodieManager.hoodie.store setAccountDatabaseForUsername:username];
                                                     [self performSegueWithIdentifier:@"authSegue" sender:self];
                                                     
                                                 } else {
@@ -164,6 +168,7 @@
                                                 
                                                 if (!error)
                                                 {
+                                                    [hoodieManager.hoodie.store setAccountDatabaseForUsername:hoodieManager.hoodie.account.username];
                                                     [self performSegueWithIdentifier:@"authSegue" sender:self];
                                                     
                                                 } else {

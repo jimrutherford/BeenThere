@@ -5,16 +5,27 @@ slidenumbers: true
 ## Backend as a Service
 
 ---
+#About Me
 
-# definition
+* Mobile Frontend Developer
+* Freelance/Consultant
+* Passionate about Apple products
+* Advocate of Sketch
+* Love hacking with my son
+* Beginner Wood Hobbyist
+
+---
+
+# BaaS
 
 Cloud services that provide web and mobile app UI developers with a way to link their applications to a backend and the APIs exposed by backend applications.
 
 ---
-# why
+# Why?
 
 * Great if you don't have the expertise
 * Great if you don't want to maintain a server stack
+* Easy to "bootstrap" your great idea!
 
 ---
 # Paid Solutions*
@@ -30,7 +41,6 @@ Cloud services that provide web and mobile app UI developers with a way to link 
 * Hood.ie [:link:](http://hood.ie)
 * Deploy'd [:link:](http://deployd.com)
 * Helios [:link:](http://helios.io)
-* CloudMine [:link:](https://cloudmine.me)
 
 ___
 # Features to Look For
@@ -56,7 +66,7 @@ ___
 ---
 # hood.ie
 
-> Hoodie is an Offline First and noBackend architecture for frontend-only web apps on the web and on iOS.
+> Hoodie is an Offline First and noBackend architecture for frontend-only apps on the web and on iOS.
 -- Hoodie website [:link:](http://hood.ie)
 
 ---

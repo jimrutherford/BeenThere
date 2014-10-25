@@ -13,3 +13,9 @@ heart: Wed Oct 22 21:14:53 2014: Executed "/usr/local/Cellar/couchdb/1.6.1/bin/c
 
 heart_beat_kill_pid = 14376
 heart_beat_timeout = 11
+
+heart_beat_kill_pid = 17950
+heart_beat_timeout = 11
+heart: Thu Oct 23 21:06:37 2014: heart-beat time-out, no activity for 2632 seconds
+/usr/local/Cellar/couchdb/1.6.1/bin/couchdb: line 343: echo: write error: Broken pipe
+heart: Thu Oct 23 21:06:38 2014: Executed "/usr/local/Cellar/couchdb/1.6.1/bin/couchdb -k" -> 256. Terminating.
